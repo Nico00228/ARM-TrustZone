@@ -1,5 +1,5 @@
 # Security States
-	- Now we have 4 different security states:
+- Now we have 4 different security states:
 		- Non-secure
 		- Secure
 		- Realm
