@@ -1,0 +1,6 @@
+- PKI for passports
+- PQC adoption
+- China is adopting another standard instead of BIOS/UEFI, could be subject for a groupwork, Lioy has contacts in phone indusitry in China
+- Merkle tree certificate, proposed in the last IETF meeting
+- Remote attestation, lot of groups are working on it so could be focused on a work of a group or focusing on a specific architecture
+- [j](jj)
