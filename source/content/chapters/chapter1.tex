@@ -1,6 +1,12 @@
 \chapter{Introduction}
 \label{sec:introduction}
 
-Introduzione riguardo il confidential computing. Importanza e applicazioni di TEE e Attestation.
+Nowadays web applications, machine learning models, and multimedia services run in multi-tenant environments. As a result, multiple independent workloads coexist on the same hardware platform. In order to secure data in use in terms of confidentiality and integrity, a secure environment is needed, enabling isolation of sensitive computations from other workloads present on the same device.
 
-Descrizione di cosa sarà presente nel documento.
+Arm, for this purpose, firstly developed TrustZone, an architecture that supports two security states, the Normal world and the Secure world. In this type of architecture there is no mutual isolation between two applications that are been running in the Secure world, leading to potential sensitive data disclosure.
+
+Due to the lack of isolation per application, Arm started to develop a second architecture: Confidential Compute Architecture (CCA). Arm CCA makes available four security states: the ones of TrustZone, the Realm world, and the Root world. The hardware-based environment that guarantees isolation of a single application is called Realm and the architecture enables the deployment of multiple instances of Realms. 
+
+This paper provides a detailed description of Arm CCA, descrbing the differences in comparison to TrustZone, highlighting its drawbacks that are not yet resolved, and proposing possible solutions and future works.  
+
+The following sections are organized as follows. Section \ref{sec:arch} provides background on Arm's architecture technologies, covering Exception Model, Memory Management, and Granule Partition Table (GPT). Section \ref{sec:trustzone} provides a briefly overview of Arm TrustZone highlighting its main downsides. Section \ref{sec:cca} provides a detailed analysis of hardware and software components that are part of Arm CCA; it follows the attestation mechanism which Arm is working on for CCA. Section \ref{sec:considerations} provides comparison and considerations between TrustZone and CCA in terms of the architecture, use cases, and the attestation mechanisms. Section \ref{sec:conclusions} concludes the paper.

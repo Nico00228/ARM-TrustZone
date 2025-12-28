@@ -5,7 +5,7 @@ The main requirements which Arm CCA addresses is the enable of mutual distrust a
 This issues are addressed with an architecture oriented towards the isolation between Virtual Machines, called Realms (more details on this later).
 
 Arm CCA has not yet been released on the market, but different simulations have been developed on earlier Arm architectures \cite{IEEE:openCCA}.
-The ARM CCA architecture is made up by both software and hardware components. Moreover, they constitutes the Trusted Computing Base for the confidential computing. In this chapter the CCA architecture is presented, describing both the hardware (sections \ref{sec:RME}, \ref{sec:HES}) and the software elements (sections \ref{sec:monitor}, \ref{sec:RMM}). Then, the focus is put on the attestation mechanism (section \ref{sec:attCCA}). 
+The Arm CCA is made up by both software and hardware components. Moreover, they constitutes the Trusted Computing Base for the confidential computing. In this chapter the CCA architecture is presented, describing both the hardware (sections \ref{sec:RME}, \ref{sec:HES}) and the software elements (sections \ref{sec:monitor}, \ref{sec:RMM}). Then, the focus is put on the attestation mechanism (section \ref{sec:attCCA}). 
 
 \section{Realm Management Engine}
 \label{sec:RME}
@@ -14,7 +14,7 @@ The Realm Management Engine (RME) provides the hardware primitives necessary to 
 
 RME enables the dynamic transfer of resources and memory to a new protected address space. Arm CCA exploits the new address space in order to construct protected execution environments called Realms.
 
-The security state associated is called \textbf{Realm} and it is implemented in a way so that every service/application that runs in it is isolated from the other service/application. It is useful to note that the software that run in Secure state and Realm state are mutually distrusting. The Secure state is maintained from the previous architectures for backward compatibility.
+The security state associated is called Realmand it is implemented in a way so that every service/application that runs in it is isolated from the other service/application. It is useful to note that the software that run in Secure state and Realm state are mutually distrusting. The Secure state is maintained from the previous architectures for backward compatibility.
 
 \subsection{Security States}
 \label{subsec:sec_states}
@@ -56,7 +56,7 @@ To map each state two bits of the SCR\_EL3 register are encoded (NSE,NS) as seen
     \label{tab:sec_encoding}
 \end{table}
 
-The \textbf{Root} state has no encoding, when the Processing element is at the exception level 3, the security state is always the Root state, regardless the configuration of the SCR\_EL3 register.
+The Root state has no encoding, when the Processing element is at the exception level 3, the security state is always the Root state, regardless the configuration of the SCR\_EL3 register.
 
 \subsection{Memory isolation and protection}
 \label{subsec:mem_isolation}

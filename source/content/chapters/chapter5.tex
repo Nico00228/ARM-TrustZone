@@ -1,5 +1,5 @@
 \chapter{Comparison and Considerations}
-\label{sec:attestation}
+\label{sec:considerations}
 As described throughout this work, Arm TrustZone and Arm CCA are two extremely different solutions. Besides the fact that Arm CCA solves some TrustZone downsides, they must not be considered as two mutually exclusive technologies. In fact, when Arm CCA will become available on the market, luckily Arm TrustZone will be still adopted for specific purposes. This section aims to highlight the differences between the two technologies, depicting the different possible use cases.
 
 \section{Architecture}
@@ -52,4 +52,4 @@ Instead, there are current effort by Arm and Linaro for defining a standard form
 Besides that, the Arm CCA attestation process presents some potential downsides. In fact, it seems that no efforts has been put in order to preserve privacy and information leakage issues. The CCA attestation token is made up by two different tokens: the realm and the platform attestation token. So, two different Realms will have two different Realm attestation token, but they will share the same platform attestation token if they are running on the same physical machine.
 This could be a severe downside to address: in the scenario of a cloud provider which hosts a multi-tenant environment, this issue could leak companies relationship or information about the infrastructure management. In a scenario in which Arm CCA is employed for end-user devices use case, this information leakage could be exploited to track the user activity among different services.
 
-Arm raised the attention about these possible issues, but in both CCA security model and attestation token draft they stated that this problematic was out of scope in that context. They suggested the usage of pseudonyms keys, but no further details has been provided.
+Arm raised the attention about these possible issues, but in both CCA security model and attestation token draft they stated that this problematic was out of scope in that context. They suggested the usage of pseudonyms keys, but no further details have been provided.
